@@ -97,6 +97,7 @@
 		<div role="contentinfo" aria-label="Buffs and Conditions" data-i18n-aria-label="buffs-conditions-status-section" class="sheet-section-status" >
 			<div class="sheet-status-panel" role="status" aria-live="polite" aria-label="Current Conditions" data-i18n-aria-label="current-conditions">
 				<div class="sheet-options">
+					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Battered" value="2" role="Presentation"><label data-i18n-title="condition-battered-title"  data-i18n-aria-label="condition-battered-title"><b data-i18n="battered"> Battered</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Bleed" value="1" role="Presentation"><label data-i18n-title="condition-bleed-title"  data-i18n-aria-label="condition-bleed-title"><b data-i18n="bleed"> Bleed</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Blinded" value="2" role="Presentation"><label data-i18n-title="condition-blinded-title"  data-i18n-aria-label="condition-blinded-title"><b data-i18n="blinded"> Blinded</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Cowering" value="2" role="Presentation"><label data-i18n-title="condition-cowering-title"  data-i18n-aria-label="condition-cowering-title"><b data-i18n="cowering"> Cowering</b></label>
@@ -118,6 +119,7 @@
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Helpless" value="1" role="Presentation"><label title="Set Dexterity to 0(-5 DEX-mod)"><b data-i18n="helpless" data-i18n-title="condition-helpless-title" data-i18n-aria-label="condition-helpless-title">Helpless</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Incorporeal" value="1" role="Presentation"><label data-i18n-title="condition-incorporeal-title"  data-i18n-aria-label="condition-incorporeal-title"><b data-i18n="incorporeal"> Incorporeal</b></label>	
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Invisible" value="2" role="Presentation"><label data-i18n-title="condition-invisible-title"  data-i18n-aria-label="condition-invisible-title"><b data-i18n="invisible"> Invisible</b></label>
+					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Martial-Focus" value="1" role="Presentation"><label data-i18n-title="condition-martial-focus-title"  data-i18n-aria-label="condition-martial-focus-title"><b data-i18n="martial-focus"> Martial Focus</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Nauseated" value="1" role="Presentation"><label data-i18n-title="condition-nauseated-title"  data-i18n-aria-label="condition-nauseated-title"><b data-i18n="nauseated"> Nauseated</b></label>	
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Paralyzed" value="4" role="Presentation"><label data-i18n-title="condition-paralyzed-title"  data-i18n-aria-label="condition-paralyzed-title"><b data-i18n="paralyzed"> Paralyzed</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Petrified" value="1" role="Presentation"><label data-i18n-title="condition-petrified-title"  data-i18n-aria-label="condition-petrified-title"><b data-i18n="petrified"> Petrified</b></label>	
@@ -224,6 +226,7 @@
 			</div>
 		</div>
 		<div role="contentinfo" aria-label="Buffs and Conditions" data-i18n-aria-label="buffs-conditions-edit-section" class="sheet-section-condbuffedit">
+			<input type="checkbox" class="sheet-spheres-show" name="attr_spheres-show" value="1" role="presentation" />
 			<input type="checkbox" class="sheet-showarrow sheet-conditions-show" name="attr_conditions-show" value="1" data-i18n-title="conditions-showsect-cmd"  aria-labeledby="Set Conditions" data-i18n-aria-label="conditions-set" />
 			<h2 class="sheet-showsect" style="width:49%;margin-right:0.25em;margin-bottom:0;"><label data-i18n="conditions-set">Set Conditions</label></h2>
 			<input type="checkbox" class="sheet-showarrow sheet-buffs-show" name="attr_buffstop-show" value="1" data-i18n-title="buffs-showsect-cmd"  aria-labeledby="Set Buffs" data-i18n-aria-label="buffs-set" />
@@ -232,6 +235,7 @@
 			<div class="sheet-conditions" data-i18n-list="conditions-list">
 				<span class="sheet-nontable-name sheet-secondary-table-name" data-i18n="conditions-set">Set Conditions</span>
 				<input type="checkbox" value="1" name="attr_extra_fields_conditions_show" title="@{extra_fields_conditions_show}" class="sheet-extra-show sheet-selectedlabel-check" /><b data-i18n-title="show-all-conditions-desc" data-i18n="show-all-conditions">SHOW ALL CONDITIONS</b>
+				<label class="sheet-option-condition sheet-section-spheres sheet-left" data-i18n-list-item="battered"><input type="checkbox" title="@{condition-Battered}" class="sheet-boldlabel-check" name="attr_condition-Battered" value="2" /><b><span data-i18n-title="condition-battered-title"  data-i18n-aria-label="condition-battered-title" data-i18n="battered">Battered</span></b></label>
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="bleed"><input type="checkbox" title="@{condition-Bleed}" class="sheet-boldlabel-check" name="attr_condition-Bleed" value="1" /><b><span data-i18n-title="condition-bleed-title"  data-i18n-aria-label="condition-bleed-title" data-i18n="bleed">Bleed</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="blinded"><input type="checkbox" title="@{condition-Blinded}" class="sheet-boldlabel-check" name="attr_condition-Blinded" value="2" /><b><span data-i18n-title="condition-blinded-title"  data-i18n-aria-label="condition-blinded-title" data-i18n="blinded">Blinded</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="cowering"><input type="checkbox" title="@{condition-Cowering}" class="sheet-boldlabel-check" name="attr_condition-Cowering" value="2" /><b><span data-i18n-title="condition-cowering-title"  data-i18n-aria-label="condition-cowering-title" data-i18n="cowering">Cowering</span></b></label>
@@ -252,6 +256,7 @@
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="helpless"><input type="checkbox" title="@{condition-Helpless}" class="sheet-boldlabel-check" name="attr_condition-Helpless" value="1" /><b><span data-i18n-title="condition-helpless-title"  data-i18n-aria-label="condition-helpless-title" data-i18n="helpless">Helpless</span></b></label>
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="incorporeal"><input type="checkbox" title="@{condition-Incorporeal}" class="sheet-boldlabel-check" name="attr_condition-Incorporeal" value="1" /><b><span data-i18n-title="condition-incorporeal-title"  data-i18n-aria-label="condition-incorporeal-title" data-i18n="incorporeal">Incorporeal</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="invisible"><input type="checkbox" title="@{condition-Invisible}" class="sheet-boldlabel-check" name="attr_condition-Invisible" value="2" /><b><span data-i18n-title="condition-invisible-title"  data-i18n-aria-label="condition-invisible-title" data-i18n="invisible">Invisible</span></b></label>
+				<label class="sheet-option-condition sheet-extra-sect sheet-section-spheres sheet-left" data-i18n-list-item="martial-focus"><input type="checkbox" title="@{condition-Martial-Focus}" class="sheet-boldlabel-check" name="attr_condition-Martial-Focus" value="1" /><b><span data-i18n-title="condition-martial-focus-title"  data-i18n-aria-label="condition-martial-focus-title" data-i18n="martial-focus">Martial Focus</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="nauseated"><input type="checkbox" title="@{condition-Nauseated}" class="sheet-boldlabel-check" name="attr_condition-Nauseated" value="1" /><b><span data-i18n-title="condition-nauseated-title"  data-i18n-aria-label="condition-nauseated-title" data-i18n="nauseated">Nauseated</span></b></label>
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="paralyzed"><input type="checkbox" title="@{condition-Paralyzed}" class="sheet-boldlabel-check" name="attr_condition-Paralyzed" value="1" /><b><span data-i18n-title="condition-paralyzed-title"  data-i18n-aria-label="condition-paralyzed-title" data-i18n="paralyzed">Paralyzed</span></b></label>
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="petrified"><input type="checkbox" title="@{condition-Petrified}" class="sheet-boldlabel-check" name="attr_condition-Petrified" value="1" /><b><span data-i18n-title="condition-petrified-title"  data-i18n-aria-label="condition-petrified-title" data-i18n="petrified">Petrified</span></b></label>
@@ -13787,6 +13792,15 @@
 					<span class="sheet-table-config-row-name" data-i18n="horror-adventures">Horror Adventures</span>
 					<span class="sheet-table-cell sheet-left">
 						<input type="checkbox" title="@{use_horror_adventures}" name="attr_use_horror_adventures" value="1" class="sheet-selectedlabel-check" data-i18n-aria-label="toggle-horror-adventures-long" /><b><span data-i18n-title="toggle-horror-adventures-long" data-i18n="toggle-horror-adventures"> Enable Horror Adventures</span></b>
+					</span>
+				</div>
+				<div class="sheet-table-row">
+					<span class="sheet-table-config-row-name" data-i18n="sphere-power-might" style="border-bottom:none;">Spheres of Power/Might</span>
+					<span class="sheet-table-cell sheet-left">
+						<input type="checkbox" title="@{spheres-show}" name="attr_spheres-show" value="1" class="sheet-selectedlabel-check sheet-sect2-show" /><b><span data-i18n-title="toggle-spheres-title" data-i18n="toggle-spheres"> Enable Spheres</span></b>
+						<input type="radio" title="@{use_spheres}" name="attr_use_spheres" value="0" class="sheet-selectedlabel-check sheet-sect2" /><b class="sheet-sect2"><span data-i18n-title="use-spheres-of-power-title" data-i18n="sphere-power">Spheres of Power</span></b>
+						<input type="radio" title="@{use_spheres}" name="attr_use_spheres" value="1" class="sheet-selectedlabel-check sheet-sect2" /><b class="sheet-sect2"><span data-i18n-title="use-spheres-of-might-title" data-i18n="sphere-might">Spheres of Might</span></b>
+						<input type="radio" title="@{use_spheres}" name="attr_use_spheres" value="2" class="sheet-selectedlabel-check sheet-sect2" checked /><b class="sheet-sect2"><span data-i18n-title="use-both-spheres-title" data-i18n="both">Both</span></b>
 					</span>
 				</div>
 			</div>			

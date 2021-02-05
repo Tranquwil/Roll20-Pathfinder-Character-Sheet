@@ -526,13 +526,14 @@ export function applyConditions (callback, silently,eventInfo) {
             callback();
         }
     });
-    getAttrs(["AC-penalty", "CMD-penalty", "condition-Blinded", "condition-Cowering", "condition-Stunned", 
+    getAttrs(["AC-penalty", "CMD-penalty", "condition-Battered", "condition-Blinded", "condition-Cowering", "condition-Stunned", 
     "condition-Pinned", "condition-Wounds", "condition-Drained", "has_endurance_feat", "wounds_gritty_mode",
     "condition-Grappled", "condition-Invisible",
     "condition-Paralyzed","condition-Helpless","condition-Prone","condition_defense_notes"], function (v) {
         var subTotPenalty = 0,
         drained = 0,
         woundLevel = 0,
+        battered = 0,
         AC = 0,
         CMD = 0,
         newCMD = 0,
@@ -547,6 +548,7 @@ export function applyConditions (callback, silently,eventInfo) {
             if (!eventInfo || !(/grappled|invisible/i).test(eventInfo.sourceAttribute)){ 
                 drained = parseInt(v["condition-Drained"], 10) || 0;
                 woundLevel = parseInt(v["condition-Wounds"], 10) || 0;
+                battered = -1 * (parseInt(v["condition-Battered"], 10) || 0);
                 AC = parseInt(v["AC-penalty"], 10) || 0;
                 CMD = parseInt(v["CMD-penalty"], 10) || 0;
                 hasEndurance = parseInt(v.has_endurance_feat, 10) || 0;
@@ -554,7 +556,7 @@ export function applyConditions (callback, silently,eventInfo) {
                 woundPenalty = PFUtils.getWoundPenalty(woundLevel, hasEndurance, grittyMode);
                 subTotPenalty = -1 * ((parseInt(v["condition-Blinded"], 10) || 0) + (parseInt(v["condition-Pinned"], 10) || 0) + (parseInt(v["condition-Cowering"], 10) || 0) + (parseInt(v["condition-Stunned"], 10) || 0));
                 subTotPenalty += woundPenalty;
-                newCMD = drained + subTotPenalty;
+                newCMD = drained + battered + subTotPenalty;
                 if (AC !== subTotPenalty) {
                     setter["AC-penalty"] = subTotPenalty;
                 }

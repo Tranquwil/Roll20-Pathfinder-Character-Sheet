@@ -91,6 +91,7 @@ h4,h5,h6 {
 .sheet-wounds-show,
 .sheet-mythic-show,
 .sheet-psionic-show,
+.sheet-spheres-show,
 .sheet-racial-traits-show,
 .sheet-traits-show,
 .sheet-featlist-show,
@@ -5248,6 +5249,8 @@ input.sheet-skill-macro-text {
 .sheet-mythic-show:not(:checked) ~ .sheet-repeating-fields .sheet-section-mythic,
 .sheet-mythic-show:not(:checked) ~ .sheet-repeating-sect .sheet-repeating-fields .sheet-section-mythic,
 .sheet-mythic-show:not(:checked) ~ div .sheet-section-mythic,
+.sheet-spheres-show:not(:checked) ~ .sheet-section-spheres,
+.sheet-spheres-show:not(:checked) ~ div .sheet-section-spheres,
 .sheet-psionic-show:not(:checked) ~ .sheet-section-psionic,
 .sheet-psionic-show:not(:checked) ~ div .sheet-section-psionic {
     display: none !important;

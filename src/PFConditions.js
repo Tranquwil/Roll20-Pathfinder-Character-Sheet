@@ -154,6 +154,7 @@ var events = {
 		"change:condition-pinned": [togglePinnedState],
 		"change:condition-Fatigued": [toggleFatiguedState],
 		"change:condition-Exhausted": [toggleExhaustedState],
+		"change:condition-battered": [PFDefense.applyConditions],
 		"change:condition-sickened": [PFAttacks.updateRepeatingWeaponDamages, PFChecks.applyConditions, PFSaves.applyConditions, PFAttackGrid.applyConditions],
 		"change:condition-stunned": [PFDefense.updateDefenses, PFDefense.applyConditions],
 		"change:condition-flat-footed": [PFDefense.updateDefenses],
