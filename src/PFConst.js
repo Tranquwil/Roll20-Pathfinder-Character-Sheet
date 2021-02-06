@@ -107,6 +107,9 @@ export default {
 		"internalbuffer_macro_text": "internalbuffer_max",
 		"kineticblast_attack_macro_text": "kineticblast_attack-mod",
 		"kineticblast_dmg_macro_text": "kineticblast_dmg-mod",
+		"sop-talents-level_macro_text": "sop-talents-level-mod",
+		"som-talents-level_macro_text": "som-talents-level-mod",
+		"blend-talents-level_macro_text": "blend-talents-level-mod",
 		"spellclass-0-spell-points-misc": "spellclass-0-spell-points-misc-mod",
 		"spellclass-1-spell-points-misc": "spellclass-1-spell-points-misc-mod",
 		"spellclass-2-spell-points-misc": "spellclass-2-spell-points-misc-mod"

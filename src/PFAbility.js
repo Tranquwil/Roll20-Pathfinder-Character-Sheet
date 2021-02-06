@@ -21,10 +21,12 @@ allOptionRepeatingFields=optionFields.concat(optionRepeatingHelperFields),
 tabRuleSorted ={
 	'class-features':0,
 	'feats':1,
+	'might':13,
 	'monster-rule':8,
 	'mythic-abilities':3,
 	'mythic-feats':1,
 	'other':8,
+	'power':12,
 	'racial-traits':2,
 	'special-abilities':5,
 	'special-attacks':4,
@@ -37,7 +39,7 @@ tabTypeSorted = {
 	'Sp':10,
 	'Su':11
 },
-categoryAttrs = ['tabcat-1','tabcat0','tabcat1','tabcat2','tabcat3','tabcat4','tabcat5','tabcat6','tabcat7','tabcat8','tabcat9','tabcat10','tabcat11'],
+categoryAttrs = ['tabcat-1','tabcat0','tabcat1','tabcat2','tabcat3','tabcat4','tabcat5','tabcat6','tabcat7','tabcat8','tabcat9','tabcat10','tabcat11','tabcat12','tabcat13'],
 otherCommandMacros = {
 	'ex':" [^{extraordinary-abilities-menu}](~@{character_id}|NPCPREFIXex_button)",
 	'sp':" [^{spell-like-abilities-menu}](~@{character_id}|NPCPREFIXsp_button)",
@@ -136,6 +138,10 @@ function setRuleTab (callback,silently,id,eventInfo){
 			} else if (v[prefix + 'rule_category'] === 'racial-traits' && 
 				(!v[prefix + 'CL-basis'] ||v[prefix + 'CL-basis']=="0")){
 					setter[prefix + 'CL-basis']='@{level}';
+					params={};
+			} else if (v[prefix + 'rule_category'] === 'might' && 
+				(!v[prefix + 'CL-basis'] ||v[prefix + 'CL-basis']=="0")){
+					setter[prefix + 'CL-basis']='@{BAB}';
 					params={};
 			}
 		}

@@ -91,7 +91,9 @@ h4,h5,h6 {
 .sheet-wounds-show,
 .sheet-mythic-show,
 .sheet-psionic-show,
-.sheet-spheres-show,
+.sheet-sphere-power-show,
+.sheet-sphere-might-show,
+.sheet-sphere-rules-show,
 .sheet-racial-traits-show,
 .sheet-traits-show,
 .sheet-featlist-show,
@@ -1280,6 +1282,8 @@ input.sheet-tabinput {
 .sheet-tabinput.sheet-tab9:checked + .sheet-tab.sheet-tab9,
 .sheet-tabinput.sheet-tab10:checked + .sheet-tab.sheet-tab10,
 .sheet-tabinput.sheet-tab11:checked + .sheet-tab.sheet-tab11,
+.sheet-tabinput.sheet-tab12:checked + .sheet-tab.sheet-tab12,
+.sheet-tabinput.sheet-tab13:checked + .sheet-tab.sheet-tab13,
 .sheet-tabinput.sheet-tab99:checked ~ .sheet-tab.sheet-tab99 {
     background: Black;
     color: White;
@@ -1306,6 +1310,8 @@ input.sheet-tabinput {
 .sheet-tabs:not(.sheet-custbordernav) ~ .sheet-tabinput.sheet-tab9:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section9,
 .sheet-tabs:not(.sheet-custbordernav) ~ .sheet-tabinput.sheet-tab10:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section10,
 .sheet-tabs:not(.sheet-custbordernav) ~ .sheet-tabinput.sheet-tab11:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section11,
+.sheet-tabs:not(.sheet-custbordernav) ~ .sheet-tabinput.sheet-tab12:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section12,
+.sheet-tabs:not(.sheet-custbordernav) ~ .sheet-tabinput.sheet-tab13:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section13,
 .sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab0:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-0:not(:checked) ~ .sheet-custrepeating-border,
 .sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab1:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-1:not(:checked) ~ .sheet-custrepeating-border,
 .sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab2:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-2:not(:checked) ~ .sheet-custrepeating-border,
@@ -1317,7 +1323,9 @@ input.sheet-tabinput {
 .sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab8:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-8:not(:checked) ~ .sheet-custrepeating-border,
 .sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab9:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-9:not(:checked) ~ .sheet-custrepeating-border,
 .sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab10:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-10:not(:checked) ~ .sheet-custrepeating-border,
-.sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab11:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-11:not(:checked) ~ .sheet-custrepeating-border {
+.sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab11:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-11:not(:checked) ~ .sheet-custrepeating-border,
+.sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab12:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-12:not(:checked) ~ .sheet-custrepeating-border,
+.sheet-tabs.sheet-custbordernav ~ .sheet-tabinput.sheet-tab13:checked ~ .sheet-repeating-fields .sheet-custnavsection-new:not(:checked) ~ .sheet-custnavsection-13:not(:checked) ~ .sheet-custrepeating-border {
     display: none;
 }
 /* if all pressed show all */
@@ -1337,7 +1345,9 @@ input.sheet-tabinput {
 .sheet-tabs.sheet-custbordernav.sheet-abilitiesnav ~ .sheet-tabinput.sheet-tab8:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section8,
 .sheet-tabs.sheet-custbordernav.sheet-abilitiesnav ~ .sheet-tabinput.sheet-tab9:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section9,
 .sheet-tabs.sheet-custbordernav.sheet-abilitiesnav ~ .sheet-tabinput.sheet-tab10:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section10,
-.sheet-tabs.sheet-custbordernav.sheet-abilitiesnav ~ .sheet-tabinput.sheet-tab11:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section11 {
+.sheet-tabs.sheet-custbordernav.sheet-abilitiesnav ~ .sheet-tabinput.sheet-tab11:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section11,
+.sheet-tabs.sheet-custbordernav.sheet-abilitiesnav ~ .sheet-tabinput.sheet-tab12:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section12,
+.sheet-tabs.sheet-custbordernav.sheet-abilitiesnav ~ .sheet-tabinput.sheet-tab13:not(:checked) ~ .sheet-tabinput.sheet-tab99:not(:checked) ~ .sheet-section13 {
 	display:none;
 }
 /* hover */
@@ -1353,6 +1363,8 @@ input.sheet-tabinput {
 .sheet-tabinput.sheet-tab9:not(:checked):hover + .sheet-tab.sheet-tab9,
 .sheet-tabinput.sheet-tab10:not(:checked):hover + .sheet-tab.sheet-tab10,
 .sheet-tabinput.sheet-tab11:not(:checked):hover + .sheet-tab.sheet-tab11,
+.sheet-tabinput.sheet-tab12:not(:checked):hover + .sheet-tab.sheet-tab12,
+.sheet-tabinput.sheet-tab13:not(:checked):hover + .sheet-tab.sheet-tab13,
 .sheet-tabinput.sheet-tab99:not(:checked):hover ~ .sheet-tab.sheet-tab99 {
     color: #e0e0e0;
 }
@@ -5251,8 +5263,10 @@ input.sheet-skill-macro-text {
 .sheet-mythic-show:not(:checked) ~ .sheet-repeating-fields .sheet-section-mythic,
 .sheet-mythic-show:not(:checked) ~ .sheet-repeating-sect .sheet-repeating-fields .sheet-section-mythic,
 .sheet-mythic-show:not(:checked) ~ div .sheet-section-mythic,
-.sheet-spheres-show:not(:checked) ~ .sheet-section-spheres,
-.sheet-spheres-show:not(:checked) ~ div .sheet-section-spheres,
+.sheet-sphere-power-show:not(:checked) ~ .sheet-section-sphere-power,
+.sheet-sphere-power-show:not(:checked) ~ div .sheet-section-sphere-power,
+.sheet-sphere-might-show:not(:checked) ~ .sheet-section-sphere-might,
+.sheet-sphere-might-show:not(:checked) ~ div .sheet-section-sphere-might,
 .sheet-psionic-show:not(:checked) ~ .sheet-section-psionic,
 .sheet-psionic-show:not(:checked) ~ div .sheet-section-psionic {
     display: none !important;

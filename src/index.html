@@ -94,10 +94,12 @@
 		<input type="checkbox" name="attr_normal_macro_show" value="1" class="sheet-all-macro-text-show sheet-noshow" style="display:none;" role="presentation" />
 		<input type="checkbox" name="attr_adv_macro_show" value="1" class="sheet-advanced-macro-show sheet-noshow" role="presentation" />
 		<input type="checkbox" name="attr_use_spells" value="1" class="sheet-show-spell-tab sheet-noshow" data-i18n-aria-label="uses-spells-title" role="presentation" />		
+		<input type="checkbox" name="attr_use_sop" value="1" class="sheet-show-sop-tab sheet-noshow" role="presentation" />
+		<input type="checkbox" name="attr_sphere-power-show" value="1" class="sheet-sphere-power-show" role="presentation" />
 		<div role="contentinfo" aria-label="Buffs and Conditions" data-i18n-aria-label="buffs-conditions-status-section" class="sheet-section-status" >
 			<div class="sheet-status-panel" role="status" aria-live="polite" aria-label="Current Conditions" data-i18n-aria-label="current-conditions">
 				<div class="sheet-options">
-					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Battered" value="2" role="Presentation"><label data-i18n-title="condition-battered-title"  data-i18n-aria-label="condition-battered-title"><b data-i18n="battered"> Battered</b></label>
+					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Battered" value="2" role="Presentation"><label data-i18n-title="condition-battered-title"  data-i18n-aria-label="condition-battered-title"><b data-i18n="battered"> Battered</b></label> <!-- sheet-section-spheres -->
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Bleed" value="1" role="Presentation"><label data-i18n-title="condition-bleed-title"  data-i18n-aria-label="condition-bleed-title"><b data-i18n="bleed"> Bleed</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Blinded" value="2" role="Presentation"><label data-i18n-title="condition-blinded-title"  data-i18n-aria-label="condition-blinded-title"><b data-i18n="blinded"> Blinded</b></label>
 					<input type="checkbox" class="sheet-condition-exists" name="attr_condition-Cowering" value="2" role="Presentation"><label data-i18n-title="condition-cowering-title"  data-i18n-aria-label="condition-cowering-title"><b data-i18n="cowering"> Cowering</b></label>
@@ -226,7 +228,6 @@
 			</div>
 		</div>
 		<div role="contentinfo" aria-label="Buffs and Conditions" data-i18n-aria-label="buffs-conditions-edit-section" class="sheet-section-condbuffedit">
-			<input type="checkbox" class="sheet-spheres-show" name="attr_spheres-show" value="1" role="presentation" />
 			<input type="checkbox" class="sheet-showarrow sheet-conditions-show" name="attr_conditions-show" value="1" data-i18n-title="conditions-showsect-cmd"  aria-labeledby="Set Conditions" data-i18n-aria-label="conditions-set" />
 			<h2 class="sheet-showsect" style="width:49%;margin-right:0.25em;margin-bottom:0;"><label data-i18n="conditions-set">Set Conditions</label></h2>
 			<input type="checkbox" class="sheet-showarrow sheet-buffs-show" name="attr_buffstop-show" value="1" data-i18n-title="buffs-showsect-cmd"  aria-labeledby="Set Buffs" data-i18n-aria-label="buffs-set" />
@@ -234,8 +235,11 @@
 			<div class="sheet-cheat"></div>
 			<div class="sheet-conditions" data-i18n-list="conditions-list">
 				<span class="sheet-nontable-name sheet-secondary-table-name" data-i18n="conditions-set">Set Conditions</span>
+				<input type="checkbox" class="sheet-sphere-power-show sheet-or3-show" name="attr_sphere-power-show" value="1" role="presentation" />
+				<input type="checkbox" class="sheet-sphere-might-show sheet-or3-show" name="attr_sphere-might-show" value="1" role="presentation" />
+				<input type="checkbox" class="sheet-sphere-rules-show sheet-or3-show" name="attr_sphere-rules-show" value="1" role="presentation" />
 				<input type="checkbox" value="1" name="attr_extra_fields_conditions_show" title="@{extra_fields_conditions_show}" class="sheet-extra-show sheet-selectedlabel-check" /><b data-i18n-title="show-all-conditions-desc" data-i18n="show-all-conditions">SHOW ALL CONDITIONS</b>
-				<label class="sheet-option-condition sheet-section-spheres sheet-left" data-i18n-list-item="battered"><input type="checkbox" title="@{condition-Battered}" class="sheet-boldlabel-check" name="attr_condition-Battered" value="2" /><b><span data-i18n-title="condition-battered-title"  data-i18n-aria-label="condition-battered-title" data-i18n="battered">Battered</span></b></label>
+				<label class="sheet-option-condition sheet-left sheet-or3-sect" data-i18n-list-item="battered"><input type="checkbox" title="@{condition-Battered}" class="sheet-boldlabel-check" name="attr_condition-Battered" value="2" /><b><span data-i18n-title="condition-battered-title"  data-i18n-aria-label="condition-battered-title" data-i18n="battered">Battered</span></b></label> <!-- sheet-section-spheres -->
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="bleed"><input type="checkbox" title="@{condition-Bleed}" class="sheet-boldlabel-check" name="attr_condition-Bleed" value="1" /><b><span data-i18n-title="condition-bleed-title"  data-i18n-aria-label="condition-bleed-title" data-i18n="bleed">Bleed</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="blinded"><input type="checkbox" title="@{condition-Blinded}" class="sheet-boldlabel-check" name="attr_condition-Blinded" value="2" /><b><span data-i18n-title="condition-blinded-title"  data-i18n-aria-label="condition-blinded-title" data-i18n="blinded">Blinded</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="cowering"><input type="checkbox" title="@{condition-Cowering}" class="sheet-boldlabel-check" name="attr_condition-Cowering" value="2" /><b><span data-i18n-title="condition-cowering-title"  data-i18n-aria-label="condition-cowering-title" data-i18n="cowering">Cowering</span></b></label>
@@ -256,7 +260,7 @@
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="helpless"><input type="checkbox" title="@{condition-Helpless}" class="sheet-boldlabel-check" name="attr_condition-Helpless" value="1" /><b><span data-i18n-title="condition-helpless-title"  data-i18n-aria-label="condition-helpless-title" data-i18n="helpless">Helpless</span></b></label>
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="incorporeal"><input type="checkbox" title="@{condition-Incorporeal}" class="sheet-boldlabel-check" name="attr_condition-Incorporeal" value="1" /><b><span data-i18n-title="condition-incorporeal-title"  data-i18n-aria-label="condition-incorporeal-title" data-i18n="incorporeal">Incorporeal</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="invisible"><input type="checkbox" title="@{condition-Invisible}" class="sheet-boldlabel-check" name="attr_condition-Invisible" value="2" /><b><span data-i18n-title="condition-invisible-title"  data-i18n-aria-label="condition-invisible-title" data-i18n="invisible">Invisible</span></b></label>
-				<label class="sheet-option-condition sheet-extra-sect sheet-section-spheres sheet-left" data-i18n-list-item="martial-focus"><input type="checkbox" title="@{condition-Martial-Focus}" class="sheet-boldlabel-check" name="attr_condition-Martial-Focus" value="1" /><b><span data-i18n-title="condition-martial-focus-title"  data-i18n-aria-label="condition-martial-focus-title" data-i18n="martial-focus">Martial Focus</span></b></label>
+				<label class="sheet-option-condition sheet-extra-sect sheet-section-sphere-might sheet-left" data-i18n-list-item="martial-focus"><input type="checkbox" title="@{condition-Martial-Focus}" class="sheet-boldlabel-check" name="attr_condition-Martial-Focus" value="1" /><b><span data-i18n-title="condition-martial-focus-title"  data-i18n-aria-label="condition-martial-focus-title" data-i18n="martial-focus">Martial Focus</span></b></label>
 				<label class="sheet-option-condition sheet-left" data-i18n-list-item="nauseated"><input type="checkbox" title="@{condition-Nauseated}" class="sheet-boldlabel-check" name="attr_condition-Nauseated" value="1" /><b><span data-i18n-title="condition-nauseated-title"  data-i18n-aria-label="condition-nauseated-title" data-i18n="nauseated">Nauseated</span></b></label>
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="paralyzed"><input type="checkbox" title="@{condition-Paralyzed}" class="sheet-boldlabel-check" name="attr_condition-Paralyzed" value="1" /><b><span data-i18n-title="condition-paralyzed-title"  data-i18n-aria-label="condition-paralyzed-title" data-i18n="paralyzed">Paralyzed</span></b></label>
 				<label class="sheet-option-condition sheet-extra-sect sheet-left" data-i18n-list-item="petrified"><input type="checkbox" title="@{condition-Petrified}" class="sheet-boldlabel-check" name="attr_condition-Petrified" value="1" /><b><span data-i18n-title="condition-petrified-title"  data-i18n-aria-label="condition-petrified-title" data-i18n="petrified">Petrified</span></b></label>
@@ -1400,6 +1404,8 @@
 			<label role="menuitem" class="sheet-tab sheet-tab5" data-i18n-title="skills" data-i18n-aria-label="skills" data-i18n="skills">Skills</label>
 			<input type="radio" name="attr_tab" value="7" class="sheet-tabinput sheet-tab7 sheet-spelltab" data-i18n-title="spells" aria-label="Spells" data-i18n-aria-label="spells" />
 			<label role="menuitem" class="sheet-tab sheet-tab7 sheet-spelltab" data-i18n-title="spells" data-i18n-aria-label="spells" title="Spells" data-i18n="spells">Spells</label>
+			<input type="radio" name="attr_tab" value="11" class="sheet-tabinput sheet-tab11 sheet-section-sphere-power" data-i18n-title="sphere-power" aria-label="Spheres of Power" data-i18n-aria-label="sphere-power" />
+			<label role="menuitem" class="sheet-tab sheet-tab11 sheet-section-sphere-power" data-i18n-title="sphere-power" data-i18n-aria-label="sphere-power" title="Spheres of Power" data-i18n="power">Power</label>
 			<input type="radio" name="attr_tab" value="6" class="sheet-tabinput sheet-tab6" data-i18n-title="equipment" aria-label="Equipment" data-i18n-aria-label="equipment" />
 			<label role="menuitem" class="sheet-tab sheet-tab6" data-i18n-title="equipment" data-i18n-aria-label="equipment" title="Equipment" data-i18n="equipment-abbrv">Equip</label>
 			<input type="radio" name="attr_tab" value="8" class="sheet-tabinput sheet-tab8 sheet-narrow-tab sheet-npc-only" data-i18n-title="npc" aria-label="NPC" data-i18n-aria-label="npc" />
@@ -7852,6 +7858,8 @@
 					</div>
 					<input type="checkbox" class="sheet-mythic-show" name="attr_mythic-adventures-show" value="1" role="presentation" />
 					<input type="checkbox" class="sheet-psionic-show" name="attr_psionics-show" value="1" role="presentation" />
+					<input type="checkbox" class="sheet-sphere-power-show sheet-or-A-show" name="attr_sphere-power-show" value="1" role="presentation" />
+					<input type="checkbox" class="sheet-sphere-might-show sheet-or-B-show" name="attr_sphere-might-show" value="1" role="presentation" />
 					<div class="sheet-cheat"></div>
 					<input class="sheet-showarrow sheet-h2arrow" type="checkbox" name="attr_feats-show" data-i18n-aria-label="feats" data-i18n-title="showsect-cmd"  value="1" checked />
 					<h2 class="sheet-clickheader sheet-showsect"><label data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" data-i18n="feats-calculation">Feat calculations</label></h2>
@@ -7882,6 +7890,84 @@
 							<span class="sheet-table-rightcell"></span>
 						</div>
 					</div>			
+					<div class="sheet-cheat"></div>
+					<input class="sheet-showarrow sheet-h2arrow sheet-either-or-sect" type="checkbox" name="attr_spheres-info-show" data-i18n-aria-label="talents" data-i18n-title="showsect-cmd"  value="1" checked /> <!-- sheet-section-spheres -->
+					<h2 class="sheet-clickheader sheet-showsect sheet-either-or-sect"><label data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" data-i18n="talent-calculation">Talent Calculations</label></h2>
+					<div class="sheet-h2-section sheet-either-or-sect sheet-table sheet-feats">
+						<span class="sheet-secondary-table-name sheet-show-readonly" data-i18n="talents-available">Talents Available</span>
+						<div class="sheet-table-row">
+							<span class="sheet-table-header sheet-section-sphere-power sheet-section-sphere-might" data-i18n="type">Type</span>
+							<span class="sheet-table-header sheet-super sheet-note-a" data-i18n="talents-by-level">Talents by Level</span>
+							<span class="sheet-table-header sheet-divider"></span>
+							<span class="sheet-table-header" data-i18n="tradition">Tradition</span>
+							<span class="sheet-table-header sheet-divider"></span>
+							<span class="sheet-table-header" data-i18n="racial-bonus">Racial Bonus</span>
+							<span class="sheet-table-header sheet-divider"></span>
+							<span class="sheet-table-header" data-i18n="class-bonus">Class Bonus</span>
+							<span class="sheet-table-header sheet-divider"></span>
+							<span class="sheet-table-header" data-i18n="miscellaneous-bonus-abbrv">Misc Bonus</span>
+							<span class="sheet-table-header sheet-divider"></span>
+							<span class="sheet-table-header" data-i18n="total-talents">Total Talents</span>
+							<span class="sheet-table-header sheet-table-rightcell"></span>
+						</div>
+						<div class="sheet-table-row sheet-section-sphere-power">
+							<span class="sheet-table-row-name sheet-section-sphere-might" data-i18n-title="sphere-power" data-i18n-aria-label="sphere-power" data-i18n="power" title="Spheres of Power" aria-label="sphere-power">Power</span>
+							<span class="sheet-table-cell sheet-linked-tablecell">
+								<input type="checkbox" name="attr_sop-talents-level-mod_error" class="sheet-error-mshow" value="1" />
+								<textarea name="attr_sop-talents-level_macro_text" title="@{sop-talents-level_macro_text}" data-i18n-placeholder="equation-macro-place" class="sheet-macro-text-inline sheet-highlight sheet-linked-cellfield"></textarea>
+								<input type="number" name="attr_sop-talents-level-mod" title="@{sop-talents-level-mod}" value="0" class="sheet-calc sheet-narrow-numbers sheet-highlight" readonly />
+							</span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="checkbox" title="@{sop-talents-tradition}" name="attr_sop-talents-tradition" value="2" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{sop-talents-race}" name="attr_sop-talents-race" value="0" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{sop-talents-class}" name="attr_sop-talents-class" value="0" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{sop-talents-misc}" name="attr_sop-talents-misc" value="0" /></span>
+							<span class="sheet-divider">=</span>
+							<span class="sheet-table-cell"><input type="text" title="@{sop-talents-total}" name="attr_sop-talents-total" value="(@{sop-talents-level-mod} + [[ @{sop-talents-tradition} ]] + [[ @{sop-talents-race} ]] + [[ @{sop-talents-class} ]] + [[ @{sop-talents-misc} ]])" class="sheet-number" disabled /></span>
+							<span class="sheet-table-rightcell"></span>
+						</div>
+						<div class="sheet-table-row sheet-section-sphere-might">
+							<span class="sheet-table-row-name sheet-section-sphere-power" data-i18n-title="sphere-might" data-i18n-aria-label="sphere-might" data-i18n="might" title="Spheres of Might" aria-label="sphere-might">Might</span>
+							<span class="sheet-table-cell sheet-linked-tablecell">
+								<input type="checkbox" name="attr_som-talents-level-mod_error" class="sheet-error-mshow" value="1" />
+								<textarea name="attr_som-talents-level_macro_text" title="@{som-talents-level_macro_text}" data-i18n-placeholder="equation-macro-place" class="sheet-macro-text-inline sheet-highlight sheet-linked-cellfield"></textarea>
+								<input type="number" name="attr_som-talents-level-mod" title="@{som-talents-level-mod}" value="0" class="sheet-calc sheet-narrow-numbers sheet-highlight" readonly />
+							</span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="checkbox" title="@{som-talents-tradition}" name="attr_som-talents-tradition" value="4" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{som-talents-race}" name="attr_som-talents-race" value="0" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{som-talents-class}" name="attr_som-talents-class" value="0" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{som-talents-misc}" name="attr_som-talents-misc" value="0" /></span>
+							<span class="sheet-divider">=</span>
+							<span class="sheet-table-cell"><input type="text" title="@{som-talents-total}" name="attr_som-talents-total" value="(@{som-talents-level-mod} + [[ @{som-talents-tradition} ]] + [[ @{som-talents-race} ]] + [[ @{som-talents-class} ]] + [[ @{som-talents-misc} ]])" class="sheet-number" disabled /></span>
+							<span class="sheet-table-rightcell"></span>
+						</div>
+						<div class="sheet-table-row sheet-section-sphere-power sheet-section-sphere-might">
+							<span class="sheet-table-row-name" data-i18n-title="sphere-power-might" data-i18n-aria-label="sphere-power-might" data-i18n="blended" title="Spheres of Power/Might" aria-label="sphere-power-might">Blended</span>
+							<span class="sheet-table-cell sheet-linked-tablecell">
+								<input type="checkbox" name="attr_blend-talents-level-mod_error" class="sheet-error-mshow" value="1" />
+								<textarea name="attr_blend-talents-level_macro_text" title="@{blend-talents-level_macro_text}" data-i18n-placeholder="equation-macro-place" class="sheet-macro-text-inline sheet-highlight sheet-linked-cellfield"></textarea>
+								<input type="number" name="attr_blend-talents-level-mod" title="@{blend-talents-level-mod}" value="0" class="sheet-calc sheet-narrow-numbers sheet-highlight" readonly />
+							</span>
+							<span class="sheet-divider"></span>
+							<span class="sheet-table-cell"></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{blend-talents-race}" name="attr_blend-talents-race" value="0" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{blend-talents-class}" name="attr_blend-talents-class" value="0" /></span>
+							<span class="sheet-divider">+</span>
+							<span class="sheet-table-cell"><input type="number" title="@{blend-talents-misc}" name="attr_blend-talents-misc" value="0" /></span>
+							<span class="sheet-divider">=</span>
+							<span class="sheet-table-cell"><input type="text" title="@{blend-talents-total}" name="attr_blend-talents-total" value="(@{blend-talents-level-mod} + [[ @{blend-talents-race} ]] + [[ @{blend-talents-class} ]] + [[ @{blend-talents-misc} ]])" class="sheet-number" disabled /></span>
+							<span class="sheet-table-rightcell"></span>
+						</div>
+					</div>
 					<div class="sheet-cheat"></div>
 					<input class="sheet-showarrow sheet-h2arrow sheet-section-mythic" type="checkbox" name="attr_mythic-info-show" data-i18n-aria-label="mythic-hero-power" data-i18n-title="showsect-cmd"  value="1" checked />
 					<h2 class="sheet-clickheader sheet-showsect sheet-section-mythic"><label data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" data-i18n="mythic-hero-power">Mythic Hero Information and Mythic Power</label></h2>
@@ -8126,23 +8212,28 @@
 				<input class="sheet-showarrow sheet-h2arrow" type="checkbox" name="attr_abilities-show" data-i18n-aria-label="abilities" data-i18n-title="showsect-cmd"  value="1" checked />
 				<h2 class="sheet-clickheader sheet-showsect"><label data-i18n-title="showsect-cmd"  data-i18n="abilities">Abilities</label></h2>
 				<div class="sheet-h2-section sheet-abilities sheet-repeating-sect sheet-wide-readonly">
-					<input type="checkbox" class="sheet-mythic-show" name="attr_mythic-adventures-show" value="1" role="presentation" />
 					<div role="menubar" class="sheet-abilitiesnav sheet-tabs sheet-custbordernav" aria-label="Abilities" data-i18n-aria-label="abilities"></div>
 					<input type="checkbox" class="sheet-mythic-show" name="attr_mythic-adventures-show" value="1" role="presentation" />
+					<input type="checkbox" class="sheet-sphere-power-show" name="attr_sphere-power-show" value="1" role="presentation" />
+					<input type="checkbox" class="sheet-sphere-might-show" name="attr_sphere-might-show" value="1" role="presentation" />
 					<input type="radio" class="sheet-tabinput sheet-tab0 sheet-wider-tab" name="attr_abilities_tab" value="class-features" data-i18n-title="class-features" data-i18n-aria-label="class-features" />
 					<label role="menuitem" class="sheet-tab sheet-tab0 sheet-wider-tab" data-i18n="class-features">Features</label>
 					<input type="radio" class="sheet-tabinput sheet-tab1 sheet-med-tab" name="attr_abilities_tab" value="feats" data-i18n-title="feats" data-i18n-aria-label="feats" />
 					<label role="menuitem" class="sheet-tab sheet-tab1 sheet-med-tab" data-i18n="feats">Feats</label>
+					<input type="radio" class="sheet-tabinput sheet-tab12 sheet-section-sphere-power sheet-narrow-tab" name="attr_abilities_tab" value="power" data-i18n-title="sphere-power" data-i18n-aria-label="sphere-power" />
+					<label role="menuitem" class="sheet-tab sheet-tab12 sheet-section-sphere-power sheet-narrow-tab" data-i18n="sphere-power-abbrv">SoP</label>
+					<input type="radio" class="sheet-tabinput sheet-tab13 sheet-section-sphere-might sheet-narrow-tab" name="attr_abilities_tab" value="might" data-i18n-title="sphere-might" data-i18n-aria-label="sphere-might" />
+					<label role="menuitem" class="sheet-tab sheet-tab13 sheet-section-sphere-might sheet-narrow-tab" data-i18n="sphere-might-abbrv">SoM</label>
 					<input type="radio" class="sheet-tabinput sheet-tab2 sheet-med-tab" name="attr_abilities_tab" value="traits" data-i18n-title="traits-and-racial-traits" data-i18n-aria-label="traits-and-racial-traits" />
 					<label role="menuitem" class="sheet-tab sheet-tab2 sheet-med-tab" data-i18n="traits">Traits</label>
 					<input type="radio" class="sheet-tabinput sheet-tab3 sheet-section-mythic sheet-wider-tab" name="attr_abilities_tab" value="mythic" data-i18n-title="mythic-abilities" data-i18n-aria-label="mythic-abilities" />
 					<label role="menuitem" class="sheet-tab sheet-tab3 sheet-section-mythic sheet-wider-tab" data-i18n="mythic-abilities">Mythic Abilities</label>
 					<input type="radio" class="sheet-tabinput sheet-tab4" name="attr_abilities_tab" value="special-attacks" data-i18n-title="special-attacks" data-i18n-aria-label="special-attacks" />
 					<label role="menuitem" class="sheet-tab sheet-tab4" data-i18n="special-attacks-abbrv">Spec Atk</label>
-					<input type="radio" class="sheet-tabinput sheet-tab5 sheet-wider-tab" name="attr_abilities_tab" value="special-abilities" data-i18n-title="special-abilities" data-i18n-aria-label="special-abilities" />
-					<label role="menuitem" class="sheet-tab sheet-tab5 sheet-wider-tab" data-i18n="special-abilities-abbrv">Spec Abil</label>
-					<input type="radio" class="sheet-tabinput sheet-tab6" name="attr_abilities_tab" value="spell-like-abilities" data-i18n-title="spell-like-abilities" data-i18n-aria-label="spell-like-abilities" />
-					<label role="menuitem" class="sheet-tab sheet-tab6" data-i18n="spell-like-abilities-abbrv">Spell-like</label>
+					<input type="radio" class="sheet-tabinput sheet-tab5" name="attr_abilities_tab" value="special-abilities" data-i18n-title="special-abilities" data-i18n-aria-label="special-abilities" />
+					<label role="menuitem" class="sheet-tab sheet-tab5" data-i18n="special-abilities-abbrv">Spec Abil</label>
+					<input type="radio" class="sheet-tabinput sheet-tab6 sheet-med-tab" name="attr_abilities_tab" value="spell-like-abilities" data-i18n-title="spell-like-abilities" data-i18n-aria-label="spell-like-abilities" />
+					<label role="menuitem" class="sheet-tab sheet-tab6 sheet-med-tab" data-i18n="spell-like-abilities-abbrv">Spell-like</label>
 					<input type="radio" class="sheet-tabinput sheet-tab7 sheet-narrow-tab" name="attr_abilities_tab" value="special-qualities" data-i18n-title="special-qualities" data-i18n-aria-label="special-qualities" />
 					<label role="menuitem" class="sheet-tab sheet-tab7 sheet-narrow-tab" data-i18n="special-qualities-abbrv">SQ</label>
 					<input type="radio" class="sheet-tabinput sheet-tab8 sheet-med-tab" name="attr_abilities_tab" value="other" data-i18n-title="all-other-desc" data-i18n-aria-label="all-other-desc" />
@@ -8175,6 +8266,8 @@
 							<input type="radio" name="attr_tabcat" value="-1" class="sheet-tabcopy custnavsection-new" checked role="presentation" />
 							<input type="radio" name="attr_tabcat" value="class-features" class="sheet-tabcopy custnavsection-0" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="feats" class="sheet-tabcopy custnavsection-1" role="presentation" />
+							<input type="radio" name="attr_tabcat" value="power" class="sheet-tabcopy custnavsection-12" role="presentation" />
+							<input type="radio" name="attr_tabcat" value="might" class="sheet-tabcopy custnavsection-13" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="traits" class="sheet-tabcopy custnavsection-2" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="mythic" class="sheet-tabcopy custnavsection-3" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="special-attacks" class="sheet-tabcopy custnavsection-4" role="presentation" />
@@ -8197,6 +8290,8 @@
 										<option value="class-features" data-i18n="class-features">Class Features</option>
 										<!-- confusing since defensive abilities already an <option value="defensive-abilities" data-i18n="defensive-abilities">Defensive Abilities</option>-->
 										<option value="feats" data-i18n="feats">Feats</option>
+										<option value="power" data-i18n="magic-talent" disabled>Magic Talent</option>
+										<option value="might" data-i18n="combat-talent" disabled>Combat Talent</option>
 										<option value="monster-rule" data-i18n="monster-rule">Monster Rule</option>
 										<option value="special-abilities" data-i18n="special-abilities">Special Abilities</option>
 										<option value="special-attacks" data-i18n="special-attacks">Special Attacks</option>
@@ -8219,11 +8314,13 @@
 										<option value="@{class-4-level}" data-i18n="5-ordinal-class">5th Class</option>
 										<option value="@{class-5-level}" data-i18n="6-ordinal-class">6th Class</option>
 										<option value="@{npc-hd-num}" data-i18n="race-hd-default">Race only</option>
+										<option value="@{BAB}" data-i18n="base-attack-bonus-abbrv" disabled>BAB</option>
 									</select>
 									<span data-i18n-title="caster-level-basis-explanation" data-i18n-aria-label="caster-level-basis-explanation" data-i18n="source" >Source</span>
 								</label>
 								<input type="checkbox" name="attr_CL-basis" value="0" class="sheet-or-A-show sheet-noshow sheet-nolevel-show-inverse" />
 								<input type="checkbox" name="attr_CL-basis" value="@{level}" class="sheet-or-B-show sheet-noshow" />
+								<input type="checkbox" name="attr_CL-basis" value="@{BAB}" class="sheet-or-C-show sheet-noshow" />
 								<label class="sheet-small-label2 sheet-entry-10p-shrink sheet-nor-sect sheet-sect">
 									<input type="text" value="" name="attr_class-name" title="@{repeating_ability_$X_class-name}" class="sheet-calc" readonly />
 									<span class="sheet-nowrap" data-i18n="source-name">Source Name</span>
@@ -10514,6 +10611,11 @@
 					</div>
 				</div>
 			</div>
+			<div class="sheet-section11 sheet-section sheet-section-sphere-power" role="region" aria-label="Power" data-i18n-aria-label="power">
+				<h1 class="sheet-selected-tabtitle" data-i18n="sphere-power">Spheres of Power</h1>
+				<div class="sheet-cheat sheet-show-readonly sheet-inverse-readonly"></div>
+				<!-- Spheres of Power -->
+			</div>
 			<div class="sheet-section6 sheet-section sheet-section-equipment" role="region" aria-label="Euipment" data-i18n-aria-label="equipment">
 				<div class="sheet-cheat sheet-show-readonly sheet-inverse-readonly"></div>
 				<h1 class="sheet-selected-tabtitle" data-i18n="equipment">Equipment</h1>
@@ -12764,20 +12866,26 @@
 				<div class="sheet-h2-section sheet-abilities sheet-repeating-sect sheet-wide-readonly" role="region" aria-label="special-abilities">
 					<div role="menubar" class="sheet-abilitiesnav sheet-tabs sheet-custbordernav" aria-label="Abilities" data-i18n-aria-label="abilities"></div>
 					<input type="checkbox" class="sheet-mythic-show" name="attr_mythic-adventures-show" value="1" role="presentation" />
+					<input type="checkbox" class="sheet-sphere-power-show" name="attr_sphere-power-show" value="1" role="presentation" />
+					<input type="checkbox" class="sheet-sphere-might-show" name="attr_sphere-might-show" value="1" role="presentation" />
 					<input type="radio" class="sheet-tabinput sheet-tab0 sheet-wider-tab" name="attr_npc-abilities_tab" value="class-features" data-i18n-title="class-features" data-i18n-aria-label="class-features" />
 					<label role="menuitem" class="sheet-tab sheet-tab0 sheet-wider-tab" data-i18n="class-features">Features</label>
 					<input type="radio" class="sheet-tabinput sheet-tab1 sheet-med-tab" name="attr_npc-abilities_tab" value="feats" data-i18n-title="feats" data-i18n-aria-label="feats" />
 					<label role="menuitem" class="sheet-tab sheet-tab1 sheet-med-tab" data-i18n="feats">Feats</label>
+					<input type="radio" class="sheet-tabinput sheet-tab12 sheet-section-sphere-power sheet-narrow-tab" name="attr_npc-abilities_tab" value="power" data-i18n-title="sphere-power" data-i18n-aria-label="sphere-power" />
+					<label role="menuitem" class="sheet-tab sheet-tab12 sheet-section-sphere-power sheet-narrow-tab" data-i18n="sphere-power-abbrv">SoP</label>
+					<input type="radio" class="sheet-tabinput sheet-tab13 sheet-section-sphere-might sheet-narrow-tab" name="attr_npc-abilities_tab" value="might" data-i18n-title="sphere-might" data-i18n-aria-label="sphere-might" />
+					<label role="menuitem" class="sheet-tab sheet-tab13 sheet-section-sphere-might sheet-narrow-tab" data-i18n="sphere-might-abbrv">SoM</label>
 					<input type="radio" class="sheet-tabinput sheet-tab2 sheet-med-tab" name="attr_npc-abilities_tab" value="traits" data-i18n-title="traits-and-racial-traits" data-i18n-aria-label="traits-and-racial-traits" />
 					<label role="menuitem" class="sheet-tab sheet-tab2 sheet-med-tab" data-i18n="traits">Traits</label>
 					<input type="radio" class="sheet-tabinput sheet-tab3 sheet-section-mythic sheet-wider-tab" name="attr_npc-abilities_tab" value="mythic" data-i18n-title="mythic-abilities" data-i18n-aria-label="mythic-abilities" />
 					<label role="menuitem" class="sheet-tab sheet-tab3 sheet-section-mythic sheet-wider-tab" data-i18n="mythic-abilities">Mythic Abilities</label>
 					<input type="radio" class="sheet-tabinput sheet-tab4" name="attr_npc-abilities_tab" value="special-attacks" data-i18n-title="special-attacks" data-i18n-aria-label="special-attacks" />
 					<label role="menuitem" class="sheet-tab sheet-tab4" data-i18n="special-attacks-abbrv">Spec Atk</label>
-					<input type="radio" class="sheet-tabinput sheet-tab5 sheet-wider-tab" name="attr_npc-abilities_tab" value="special-abilities" data-i18n-title="special-abilities" data-i18n-aria-label="special-abilities" />
-					<label role="menuitem" class="sheet-tab sheet-tab5 sheet-wider-tab" data-i18n="special-abilities-abbrv">Spec Abil</label>
-					<input type="radio" class="sheet-tabinput sheet-tab6" name="attr_npc-abilities_tab" value="spell-like-abilities" data-i18n-title="spell-like-abilities" data-i18n-aria-label="spell-like-abilities" />
-					<label role="menuitem" class="sheet-tab sheet-tab6" data-i18n="spell-like-abilities-abbrv">Spell-like</label>
+					<input type="radio" class="sheet-tabinput sheet-tab5" name="attr_npc-abilities_tab" value="special-abilities" data-i18n-title="special-abilities" data-i18n-aria-label="special-abilities" />
+					<label role="menuitem" class="sheet-tab sheet-tab5" data-i18n="special-abilities-abbrv">Spec Abil</label>
+					<input type="radio" class="sheet-tabinput sheet-tab6 sheet-med-tab" name="attr_npc-abilities_tab" value="spell-like-abilities" data-i18n-title="spell-like-abilities" data-i18n-aria-label="spell-like-abilities" />
+					<label role="menuitem" class="sheet-tab sheet-tab6 sheet-med-tab" data-i18n="spell-like-abilities-abbrv">Spell-like</label>
 					<input type="radio" class="sheet-tabinput sheet-tab7 sheet-narrow-tab" name="attr_npc-abilities_tab" value="special-qualities" data-i18n-title="special-qualities" data-i18n-aria-label="special-qualities" />
 					<label role="menuitem" class="sheet-tab sheet-tab7 sheet-narrow-tab" data-i18n="special-qualities-abbrv">SQ</label>
 					<input type="radio" class="sheet-tabinput sheet-tab8 sheet-med-tab" name="attr_npc-abilities_tab" value="other" data-i18n-title="all-other-desc" data-i18n-aria-label="all-other-desc" />
@@ -12809,6 +12917,8 @@
 							<input type="radio" name="attr_tabcat" value="-1" class="sheet-tabcopy custnavsection-new" checked role="presentation" />
 							<input type="radio" name="attr_tabcat" value="class-features" class="sheet-tabcopy custnavsection-0" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="feats" class="sheet-tabcopy custnavsection-1" role="presentation" />
+							<input type="radio" name="attr_tabcat" value="power" class="sheet-tabcopy custnavsection-12" role="presentation" />
+							<input type="radio" name="attr_tabcat" value="might" class="sheet-tabcopy custnavsection-13" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="traits" class="sheet-tabcopy custnavsection-2" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="mythic" class="sheet-tabcopy custnavsection-3" role="presentation" />
 							<input type="radio" name="attr_tabcat" value="special-attacks" class="sheet-tabcopy custnavsection-4" role="presentation" />
@@ -12831,6 +12941,8 @@
 										<option value="class-features" data-i18n="class-features">Class Features</option>
 										<!-- confusing since defensive abilities already an <option value="defensive-abilities" data-i18n="defensive-abilities">Defensive Abilities</option>-->
 										<option value="feats" data-i18n="feats">Feats</option>
+										<option value="power" data-i18n="magic-talent" disabled>Magic Talent</option>
+										<option value="might" data-i18n="combat-talent" disabled>Combat Talent</option>
 										<option value="monster-rule" data-i18n="monster-rule">Monster Rule</option>
 										<option value="special-abilities" data-i18n="special-abilities">Special Abilities</option>
 										<option value="special-attacks" data-i18n="special-attacks">Special Attacks</option>
@@ -12853,11 +12965,13 @@
 										<option value="@{class-4-level}" data-i18n="5-ordinal-class">5th Class</option>
 										<option value="@{class-5-level}" data-i18n="6-ordinal-class">6th Class</option>
 										<option value="@{npc-hd-num}" data-i18n="race-hd-default">Race only</option>
+										<option value="@{BAB}" data-i18n="base-attack-bonus-abbrv" disabled>BAB</option>
 									</select>
 									<span data-i18n-title="caster-level-basis-explanation" data-i18n-aria-label="caster-level-basis-explanation" data-i18n="source" >Source</span>
 								</label>
 								<input type="checkbox" name="attr_CL-basis" value="0" class="sheet-or-A-show sheet-noshow sheet-nolevel-show-inverse" />
 								<input type="checkbox" name="attr_CL-basis" value="@{level}" class="sheet-or-B-show sheet-noshow" />
+								<input type="checkbox" name="attr_CL-basis" value="@{BAB}" class="sheet-or-C-show sheet-noshow" />
 								<label class="sheet-small-label2 sheet-entry-10p-shrink sheet-nor-sect sheet-sect">
 									<input type="text" value="" name="attr_class-name" title="@{repeating_ability_$X_class-name}" class="sheet-calc" readonly />
 									<span class="sheet-nowrap" data-i18n="source-name">Source Name</span>
@@ -13797,10 +13911,9 @@
 				<div class="sheet-table-row">
 					<span class="sheet-table-config-row-name" data-i18n="sphere-power-might" style="border-bottom:none;">Spheres of Power/Might</span>
 					<span class="sheet-table-cell sheet-left">
-						<input type="checkbox" title="@{spheres-show}" name="attr_spheres-show" value="1" class="sheet-selectedlabel-check sheet-sect2-show" /><b><span data-i18n-title="toggle-spheres-title" data-i18n="toggle-spheres"> Enable Spheres</span></b>
-						<input type="radio" title="@{use_spheres}" name="attr_use_spheres" value="0" class="sheet-selectedlabel-check sheet-sect2" /><b class="sheet-sect2"><span data-i18n-title="use-spheres-of-power-title" data-i18n="sphere-power">Spheres of Power</span></b>
-						<input type="radio" title="@{use_spheres}" name="attr_use_spheres" value="1" class="sheet-selectedlabel-check sheet-sect2" /><b class="sheet-sect2"><span data-i18n-title="use-spheres-of-might-title" data-i18n="sphere-might">Spheres of Might</span></b>
-						<input type="radio" title="@{use_spheres}" name="attr_use_spheres" value="2" class="sheet-selectedlabel-check sheet-sect2" checked /><b class="sheet-sect2"><span data-i18n-title="use-both-spheres-title" data-i18n="both">Both</span></b>
+						<input type="checkbox" title="@{sphere-power-show}" name="attr_sphere-power-show" value="1" class="sheet-selectedlabel-check sheet-sect2-show" /><b><span data-i18n-title="toggle-sphere-power-title" data-i18n="toggle-sphere-power"> Enable Spheres of Power</span></b>
+						<input type="checkbox" title="@{sphere-might-show}" name="attr_sphere-might-show" value="1" class="sheet-selectedlabel-check sheet-sect2-show" /><b><span data-i18n-title="toggle-sphere-might-title" data-i18n="toggle-sphere-might"> Enable Spheres of Might</span></b>
+						<input type="checkbox" title="@{sphere-rules-show}" name="attr_sphere-rules-show" value="1" class="sheet-selectedlabel-check sheet-sect2-show" /><b><span data-i18n-title="toggle-sphere-rules" data-i18n="toggle-sphere-rules"> Enable Spheres Rules for Non-Sphere Character</span></b>
 					</span>
 				</div>
 			</div>			
