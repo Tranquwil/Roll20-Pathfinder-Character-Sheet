@@ -1208,6 +1208,20 @@ input.sheet-tabinput {
     width: 10%;
     margin-right: -10%;
 }
+.sheet-traditionsnav ~ .sheet-tab {
+    width: 20%;
+}
+.sheet-traditionsnav ~ .sheet-tabinput {
+    width: 20%;
+    margin-right: -20%;
+}
+.sheet-traditionsnav ~ .sheet-tab.sheet-tab1 {
+    width: 10%;
+}
+.sheet-traditionsnav ~ .sheet-tabinput.sheet-tab1 {
+    width: 10%;
+    margin-right: -10%;
+}
 .sheet-abilitiesnav ~ .sheet-tab {
     width: 8%;
 }
@@ -2628,9 +2642,12 @@ input[type="text"][name="attr_source-ability"]
 div.sheet-feats .sheet-table-row span {
     text-align: center;
 }
+div.sheet-talents .sheet-table-row span:last-child,
 div.sheet-feats .sheet-table-row span:last-child {
     width: auto;
 }
+.sheet-readonly-show:not(:checked) ~ .sheet-main .sheet-tab99:checked ~ .sheet-section .sheet-col .sheet-h2-section.sheet-talents,
+.sheet-readonly-show:not(:checked) ~ .sheet-main .sheet-tab99:not(:checked) ~ .sheet-section .sheet-col .sheet-h2-section.sheet-talents,
 .sheet-readonly-show:not(:checked) ~ .sheet-main .sheet-tab99:checked ~ .sheet-section .sheet-col .sheet-h2-section.sheet-feats,
 .sheet-readonly-show:not(:checked) ~ .sheet-main .sheet-tab99:not(:checked) ~ .sheet-section .sheet-col .sheet-h2-section.sheet-feats {
     width: calc(100% - 4px);
@@ -4936,6 +4953,89 @@ also if multiple repeating sects inside h2 they are 100% wide and only h2 is nar
     width: 100%;
 	display:block;
 }
+/******** spheres of power ********/
+
+.sheet-sop-spellnotes .sheet-table-header {
+	white-space:nowrap;
+}
+.sheet-sop-spellnotes .sheet-notes-cell {
+	width: 25%;
+}
+
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col1 .sheet-table .sheet-divider,
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col1 .sheet-table .sheet-divider-lg{
+	display:none;
+}
+
+.sheet-section-tradition-list .sheet-small-label2 span:not(.sheet-autoexpand) {
+	font-size: 1rem;
+}
+
+/**** untested
+.sheet-h3-section.sheet-spellclass-level,
+.sheet-h3-section.sheet-spellclass-concentration {
+	width: 69.5%;
+	float: left;
+}
+.sheet-h3-section.sheet-spellclass-ranges  {
+	display:inline-table;
+}
+.sheet-readonly-show:checked  ~ .sheet-main  .sheet-section-spells .sheet-h3-section.sheet-spellclass-ranges {
+	max-width: 29.75%;
+	vertical-align:top;
+	float:right;
+}
+.sheet-readonly-show:checked  ~ .sheet-main  .sheet-section-spells .sheet-h3-section.sheet-spellclass-roll-adj {
+	max-width: 29.75%;
+	float:right;
+}
+
+.sheet-readonly-show:checked ~ .sheet-main  .sheet-section-spells .sheet-spellclass-ranges .sheet-table-header{
+	height:3.6rem;	
+}
+
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-table-header:nth-child(8),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-table-cell:nth-child(8),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-divider:nth-child(8),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-table-header:nth-child(9),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-table-cell:nth-child(9),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-divider:nth-child(9),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-table-header:nth-child(10),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-table-cell:nth-child(10),
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-spells-per-day .sheet-table-row .sheet-divider:nth-child(10) {
+	display:none;
+}
+
+.sheet-readonly-show:checked ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col1, 
+.sheet-readonly-show:checked ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col2 {
+    width: 100%;
+}
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col1 {
+	margin: 0.2rem 0.2rem 0.2rem -0.2rem; 
+	width: 50%;
+	float:left;
+}
+
+.sheet-readonly-show:not(:checked) ~ .sheet-main .sheet-section-spells .sheet-col.sheet-col1:last-child {
+    margin: 0;
+    width: calc(50% - .4rem);
+  }
+
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col2 {
+    margin: 0.2rem; 
+	width: calc(50% - 4px);
+	float:right;
+}
+
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col1 .sheet-h2-section,
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col2 .sheet-h2-section,
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col1 .sheet-h3-section,
+.sheet-readonly-show:not(:checked) ~ .sheet-main  .sheet-section-spells .sheet-col.sheet-col2 .sheet-h3-section {
+    width: 100%;
+	display:block;
+}
+****/
+
 .sheet-readonly-show:not(:checked) ~ .sheet-main .sheet-tab99:not(:checked) ~ .sheet-section-skills .sheet-skilllist {
     width: 100%;
 }

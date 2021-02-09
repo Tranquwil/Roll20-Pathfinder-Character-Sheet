@@ -94,7 +94,6 @@
 		<input type="checkbox" name="attr_normal_macro_show" value="1" class="sheet-all-macro-text-show sheet-noshow" style="display:none;" role="presentation" />
 		<input type="checkbox" name="attr_adv_macro_show" value="1" class="sheet-advanced-macro-show sheet-noshow" role="presentation" />
 		<input type="checkbox" name="attr_use_spells" value="1" class="sheet-show-spell-tab sheet-noshow" data-i18n-aria-label="uses-spells-title" role="presentation" />		
-		<input type="checkbox" name="attr_use_sop" value="1" class="sheet-show-sop-tab sheet-noshow" role="presentation" />
 		<input type="checkbox" name="attr_sphere-power-show" value="1" class="sheet-sphere-power-show" role="presentation" />
 		<div role="contentinfo" aria-label="Buffs and Conditions" data-i18n-aria-label="buffs-conditions-status-section" class="sheet-section-status" >
 			<div class="sheet-status-panel" role="status" aria-live="polite" aria-label="Current Conditions" data-i18n-aria-label="current-conditions">
@@ -7784,6 +7783,9 @@
 			</div>
 			<div class="sheet-section4 sheet-section sheet-section-abilities" role="region" aria-label="Abilities" data-i18n-aria-label="abilities">
 				<h1 class="sheet-selected-tabtitle" data-i18n="abilities">Abilities</h1>
+				<input type="checkbox" class="sheet-sphere-power-show sheet-or3-show" name="attr_sphere-power-show" value="1" role="presentation" />
+				<input type="checkbox" class="sheet-sphere-might-show sheet-or3-show" name="attr_sphere-might-show" value="1" role="presentation" />
+				<input type="checkbox" class="sheet-sphere-rules-show sheet-or3-show" name="attr_sphere-rules-show" value="1" role="presentation" />
 				<div class="sheet-col sheet-col1">
 					<div class="sheet-h2-section sheet-inline sheet-ability-buttons sheet-hide-readonly">
 						<input type="checkbox" class="sheet-npc-show sheet-noshow" name="attr_is_npc" value="1" role="presentation" />
@@ -7891,9 +7893,9 @@
 						</div>
 					</div>			
 					<div class="sheet-cheat"></div>
-					<input class="sheet-showarrow sheet-h2arrow sheet-either-or-sect" type="checkbox" name="attr_spheres-info-show" data-i18n-aria-label="talents" data-i18n-title="showsect-cmd"  value="1" checked /> <!-- sheet-section-spheres -->
+					<input class="sheet-showarrow sheet-h2arrow sheet-either-or-sect" type="checkbox" name="attr_sphere-talent-info-show" data-i18n-aria-label="talents" data-i18n-title="showsect-cmd"  value="1" checked /> <!-- sheet-section-spheres -->
 					<h2 class="sheet-clickheader sheet-showsect sheet-either-or-sect"><label data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" data-i18n="talent-calculation">Talent Calculations</label></h2>
-					<div class="sheet-h2-section sheet-either-or-sect sheet-table sheet-feats">
+					<div class="sheet-h2-section sheet-either-or-sect sheet-table sheet-talents">
 						<span class="sheet-secondary-table-name sheet-show-readonly" data-i18n="talents-available">Talents Available</span>
 						<div class="sheet-table-row">
 							<span class="sheet-table-header sheet-section-sphere-power sheet-section-sphere-might" data-i18n="type">Type</span>
@@ -8206,6 +8208,94 @@
 					<div style="display:none;">
 						<input type="number" name="attr_kineticblast_attack" title="@{kineticblast_attack}" class="sheet-macro-text-inline" />
 						<input type="number" name="attr_kineticblast_dmg" title="@{kineticblast_dmg}"  class="sheet-macro-text-inline" />
+					</div>
+				</div>
+				<div class="sheet-cheat"></div>
+				<input class="sheet-showarrow sheet-h2arrow sheet-or3-sect" type="checkbox" name="attr_sphere-traditions-show" data-i18n-aria-label="traditions" data-i18n-title="showsect-cmd"  value="1" checked />
+				<h2 class="sheet-clickheader sheet-showsect sheet-or3-sect"><label data-i18n-title="showsect-cmd"  data-i18n="traditions">Traditions</label></h2>
+				<div class="sheet-h2-section sheet-traditions sheet-or3-sect sheet-repeating-sect sheet-wide-readonly">
+					<div role="menubar" class="sheet-traditionsnav sheet-tabs sheet-custbordernav" aria-label="Traditions" data-i18n-aria-label="traditions"></div>
+					<input type="checkbox" class="sheet-sphere-power-show sheet-or-A-show" name="attr_sphere-power-show" value="1" role="presentation" />
+					<input type="checkbox" class="sheet-sphere-might-show sheet-or-B-show" name="attr_sphere-might-show" value="1" role="presentation" />
+					<input type="radio" class="sheet-tabinput sheet-tab0" name="attr_traditions_tab" value="general-drawbacks" data-i18n-title="general-drawbacks" data-i18n-aria-label="general-drawbacks" />
+					<label role="menuitem" class="sheet-tab sheet-tab0" data-i18n="general-drawbacks">General Drawbacks</label>
+					<input type="radio" class="sheet-tabinput sheet-tab1" name="attr_traditions_tab" value="qualities" data-i18n-title="qualities" data-i18n-aria-label="qualities" />
+					<label role="menuitem" class="sheet-tab sheet-tab1" data-i18n="qualities">Qualities</label>
+					<input type="radio" class="sheet-tabinput sheet-tab2" name="attr_traditions_tab" value="boons" data-i18n-title="boons" data-i18n-aria-label="boons" />
+					<label role="menuitem" class="sheet-tab sheet-tab2" data-i18n="boons">Boons</label>
+					<input type="radio" class="sheet-tabinput sheet-tab3 sheet-either-or-sect" name="attr_traditions_tab" value="sphere-drawbacks" data-i18n-title="sphere-specific-drawbacks" data-i18n-aria-label="sphere-specific-drawbacks" />
+					<label role="menuitem" class="sheet-tab sheet-tab3 sheet-either-or-sect" data-i18n="sphere-drawbacks">Sphere Drawbacks</label>
+					<input type="radio" class="sheet-tabinput sheet-tab99 sheet-narrow-tab" name="attr_traditions_tab" value="99" data-i18n-title="all" data-i18n-aria-label="all" checked />
+					<label role="menuitem" class="sheet-tab sheet-tab99 sheet-narrow-tab" data-i18n="all">All</label>
+					<div class="sheet-cheat"></div>
+					<span class="sheet-nontable-name">&nbsp;</span>
+					<div></div> <!--prevents the repeating buttons(expand/collapse, split-view) from changing position when sheet is in collapsed mode-->
+					<input type="checkbox" class="sheet-minimize-show sheet-cssbutton" data-i18n-title="minimize-all-cmd" data-i18n-aria-label="minimize-all-cmd" title="Minimize all rows." name="attr_traditions-min-show" value="1" /><span></span>
+					<input type="checkbox" class="sheet-lock-show sheet-cssbutton" data-i18n-title="expand-cmd" data-i18n-aria-label="expand-cmd" title="Collapse or expand all rows." name="attr_traditions-expand-show" value="1" /><span></span>
+					<input type="checkbox" class="sheet-split-column-show sheet-cssbutton" data-i18n-title="column-cmd" data-i18n-aria-label="column-cmd" title="Split into two columns" name="attr_traditions-column-show" value="1" /><span></span>
+					<input class="sheet-deletebutton sheet-cssbutton sheet-deletesect-show" type="checkbox" name="attr_delete_repeating_tradition_btn" value="1" data-i18n-title="delete-tradition" data-i18n-aria-label="delete-tradition-must-confirm-next-checkbox" /><span></span><label class="sheet-deletesect sheet-allrows-note"><input type="checkbox" class="sheet-selectedlabel-check" name="attr_delete_repeating_tradition" data-i18n-aria-label="confirm-delete-tradition" data-i18n-title="confirm-delete-tradition" value="1" /><b data-i18n="delete-all-rows-are-you-sure">Deletes ALL rows, are you sure?</b></label>
+					<div class="sheet-repeating-fields sheet-table sheet-hiderepborder sheet-section-tradition-list">
+						<fieldset class="repeating_tradition">
+							<span class="sheet-error"><span class="sheet-pictos">!</span><span data-i18n="error-msg1">Error! You must delete this row before editing any items in this section.</span></span>
+							<div class="sheet-custrepeating-border sheet-nontable-repeating">
+								<input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" data-i18n-aria-label="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked /><span></span>
+								<span style="display:none;" class="sheet-small-label2 sheet-repeating-rollbutton"><button type="roll" name="attr_npc-roll" title="%{selected|repeating_tradition_$X_npc-roll}" value="@{NPC-Whisper} @{macro-text}"></button></span>
+								<span class="sheet-small-label2 sheet-repeating-rollbutton"><button type="roll" name="attr_roll" title="%{selected|repeating_tradition_$X_roll}" value="@{PC-Whisper} @{macro-text}"></button></span>
+								<label class="sheet-small-label2 sheet-entry-12p-shrink">
+									<select class="sheet-select-small" title="@{repeating_tradition_$X_rule_category}" name="attr_rule_category" data-i18n-aria-label="rule-category" >
+										<option value="" data-i18n="select-one-default" selected>&#8226;Select One</option>
+										<option value="drawback" data-i18n="drawback">Drawback</option>
+										<option value="quality" data-i18n="quality">Quality</option>
+										<option value="boon" data-i18n="boon">Boon</option>
+										<option value="sphere-specific-drawback" data-i18n="sphere-specific-drawback" disabled>Sphere-Specific Drawback</option>
+									</select>
+									<span data-i18n-title="rule-category" data-i18n-aria-label="rule-category" data-i18n="rule">Rule</span>
+								</label>
+								<label class="sheet-small-label2 sheet-entry-10p">
+									<select class="sheet-select-small" title="@{repeating_tradition_$X_tradition_type}" name="attr_tradition_type">
+										<option value=" " data-i18n="not-applicable-abbrv-default" selected>&#8226;N/A</option>
+										<option value="casting-tradition" data-i18n="casting">Casting</option>
+										<option value="crafting-tradition" data-i18n="crafting">Crafting</option>
+										<option value="mythic-tradition" data-i18n="spell-mythic-chk">Mythic</option>
+										<option value="divine-tradition" data-i18n="divine">Divine</option>
+										<option value="other-tradition" data-i18n="other">Other</option>
+									</select>
+									<span data-i18n-title="tradition-type-title" data-i18n-aria-label="tradition-type-title" data-i18n="type">Type</span>
+								</label>
+								<label class="sheet-small-label2 sheet-exspsu-dropdown">
+									<select title="@{repeating_tradition_$X_tradition_number}" name="attr_tradition_number">
+										<option value=" " data-i18n="not-applicable-abbrv-default" selected>&#8226;N/A</option>
+										<option value="1-ordinal">1</option>
+										<option value="2-ordinal">2</option>
+										<option value="3-ordinal">3</option>
+										<option value="4-ordinal">4</option>
+										<option value="5-ordinal">5</option>
+										<option value="6-ordinal">6</option>
+										<option value="7-ordinal">7</option>
+										<option value="8-ordinal">8</option>
+										<option value="9-ordinal">9</option>
+									</select>
+									<span data-i18n-title="tradition-number-title" data-i18n-aria-label="tradition-number-title" data-i18n="tradition-number">Tradition #</span>
+								</label>
+								<label class="sheet-small-label2 sheet-entry-20p-shrink"><input title="@{repeating_tradition_$X_name}" type="text" name="attr_name" data-i18n-placeholder="name"  accept="Name" /><span data-i18n="name">Name</span></label>
+								<label class="sheet-small-label2 sheet-entry-20p-shrink" style="height:auto;"><textarea class="sheet-inline-textarea sheet-both" title="@{repeating_tradition_$X_short-description}" name="attr_short-description" data-i18n-placeholder="short-description"  ></textarea><span data-i18n="short-description-abbrv">Short Desc</span></label>
+								<div class="sheet-sect sheet-expand"> 
+									<input type="checkbox" class="sheet-showarrow sheet-desc-show" data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" aria-label="Show Description" name="attr_description-show" value="1" />
+									<label class="sheet-showsect sheet-desc-showlabel" data-i18n="description">Description</label>
+									<input type="checkbox" class="sheet-showarrow sheet-macro-text-show" data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" aria-label="Show Macro Text" name="attr_macro-text-show" value="1" />
+									<label class="sheet-showsect sheet-macro-text-showlabel sheet-super sheet-note-d" data-i18n="macro-text">Macro Text</label>
+									<input type="checkbox" class="sheet-showarrow sheet-id-show" data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" aria-label="Show Row ID" name="attr_ids-show" value="1" />
+									<label class="sheet-showsect sheet-id-showlabel" data-i18n="identification-abbrv">ID</label>
+									<hr class="sheet-subnav-hr">
+									<div class="sheet-cheat"></div>
+									<textarea class="sheet-desc" title="@{repeating_tradition_$X_description}" name="attr_description" accept="Content"></textarea>
+									<textarea class="sheet-macro-text" title="@{repeating_tradition_$X_macro-text}" name="attr_macro-text">&{template:pf_ability} @{toggle_accessible_flag} @{toggle_rounded_flag} {{font=@{apply_specfont_chat}@{use_specfont}}} {{scroll_desc=@{scroll-desc}}} {{color=@{rolltemplate_color}}} {{header_image=@{header_image-pf_block}}} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{subtitle=^{@{rule_category}}}} {{name=@{name}}} {{rule_category=@{rule_category}}} {{source=^{@{tradition_number}}^{@{tradition_type}}}} {{shortdesc=@{short-description}}} {{description=@{description}}}</textarea>
+									<div class="sheet-repeating-id">
+										<span data-i18n="row-identification-for-macros">Row ID for macros</span>: <span class="sheet-selectable" name="attr_row_id">
+									</div>
+								</div>
+							</div>
+						</fieldset>
 					</div>
 				</div>
 				<div class="sheet-cheat"></div>
@@ -10611,10 +10701,83 @@
 					</div>
 				</div>
 			</div>
-			<div class="sheet-section11 sheet-section sheet-section-sphere-power" role="region" aria-label="Power" data-i18n-aria-label="power">
+			<div class="sheet-section11 sheet-section sheet-section-sphere-power" role="region" aria-label="Spheres of Power" data-i18n-aria-label="sphere-power">
 				<h1 class="sheet-selected-tabtitle" data-i18n="sphere-power">Spheres of Power</h1>
 				<div class="sheet-cheat sheet-show-readonly sheet-inverse-readonly"></div>
 				<!-- Spheres of Power -->
+				<div class="sheet-h2-section sheet-noborder-readonly sheet-wide-readonly">
+					<!-- Level and Caster Ability -->
+
+					<div class="sheet-cheat"></div>
+					<!-- Spell Points -->
+					<input class="sheet-showarrow sheet-h3arrow" type="checkbox" name="attr_sop-spellpoints-show" data-i18n-aria-label="spellspoints" data-i18n-title="showsect-cmd"  value="1" />
+					<h3 class="sheet-clickheader sheet-showsect"><label data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" data-i18n="spell-points">Spell Points</label></h3>
+					<div class="sheet-h3-section sheet-spellpoints sheet-table">
+						<div class="sheet-table-group">
+							<div class="sheet-table-row">
+								<span class="sheet-table-header" style="min-width:8em;width:20%;" data-i18n="spell-points">Spell Points</span>
+								<span class="sheet-table-header sheet-divider"></span>
+								<span class="sheet-table-header" style="min-width:8em;" data-i18n="points-per-day">Points/Day</span>
+								<span class="sheet-table-header sheet-divider"></span>
+								<span class="sheet-table-header" data-i18n="calculation">Calculation</span>
+								<span class="sheet-table-header sheet-divider"></span>
+								<span class="sheet-table-header" style="min-width:6em;" data-i18n="base">Base</span>
+								<span class="sheet-table-header sheet-divider"></span>
+								<span class="sheet-table-header" style="min-width:6em;" data-i18n="ability">Ability</span>
+								<span class="sheet-table-header sheet-table-rightcell"></span>
+							</div>
+						</div>
+						<div class="sheet-table-group">
+							<div class="sheet-table-row">
+								<span class="sheet-table-cell"><input title="@{sop-spell-points-per-day}" type="number" name="attr_sop-spell-points-per-day" value="0" /></span>
+								<span class="sheet-divider">/</span>
+								<span class="sheet-table-cell"><input title="@{sop-spell-points-per-day|max}" type="text" class="sheet-number" name="attr_sop-spell-points-per-day_max" value="(@{sop-spell-points-class} + @{sop-spell-points-bonus} + @{sop-spell-points-misc-mod})" disabled /></span>
+								<span class="sheet-divider">=</span>
+								<span class="sheet-table-cell sheet-linked-tablecell">
+									<input type="checkbox" value="1" name="attr_sop-spell-points-misc-mod_error" class="sheet-error-mshow" />
+									<textarea class="sheet-macro-text-inline sheet-linked-cellfield sheet-highlight" title="@{sop-spell-points-misc}" name="attr_sop-spell-points-misc" data-i18n-placeholder="equation-macro-place" ></textarea>
+									<input type="number" value="0" name="attr_sop-spell-points-misc-mod" title="@{sop-spell-points-misc-mod}" class="sheet-calc sheet-narrow-numbers sheet-highlight"  readonly />
+								</span>
+								<span class="sheet-divider">+</span>
+								<span class="sheet-table-cell"><input title="@{sop-spell-points-class}" type="number" name="attr_sop-spell-points-class" value="0" /></span>
+								<span class="sheet-divider">+</span>
+								<span class="sheet-table-cell"><input title="@{sop-spell-points-bonus}" type="number" name="attr_sop-spell-points-bonus" value="0" /></span>
+								<span class="sheet-table-rightcell"></span>
+							</div>
+						</div>
+					</div>
+					<div class="sheet-cheat"></div>
+					<!-- Spell Notes -->
+					<input class="sheet-showarrow sheet-h3arrow" type="checkbox" name="attr_spellclass-0-spells-notes-show" data-i18n-aria-label="spells-notes" data-i18n-title="showsect-cmd"  value="1" />
+					<h3 class="sheet-clickheader sheet-showsect"><label data-i18n-title="showsect-cmd"  data-i18n-aria-label="showsect-cmd" data-i18n="spells-notes">Spells Notes</label></h3>
+					<div class="sheet-h3-section sheet-table sheet-sop-spellnotes">
+						<span class="sheet-secondary-table-name" data-i18n="notes">Notes</span>
+						<div class="sheet-table-group-head">
+							<span class="sheet-table-header" data-i18n="spell-components" data-i18n-title="spell-component-notes" data-i18n-aria-label="spell-component-notes" >Components</span>
+							<span class="sheet-table-header" data-i18n="sphere-ability" data-i18n-title="sphere-ability-notes" data-i18n-aria-label="sphere-ability-notes" >Sphere Ability</span>					
+							<span class="sheet-table-header" data-i18n="magic-skill" data-i18n-title="magic-skill-check-notes" data-i18n-aria-label="magic-skill-check-notes" >Magic Skill</span>						
+							<span class="sheet-table-header" data-i18n="concentration" data-i18n-title="concentration-check-notes" data-i18n-aria-label="concentration-check-notes" >Concentration</span>						
+						</div>
+						<div class="sheet-table-row">
+							<div class="sheet-table-cell sheet-notes-cell">
+								<textarea class="sheet-half" title="@{sop-component-notes}" name="attr_sop-component-notes" data-i18n-placeholder="spell-component-notes"  data-i18n-aria-label="spell-components"></textarea>
+							</div>
+							<div class="sheet-table-cell sheet-notes-cell">
+								<textarea class="sheet-half" title="@{sop-sphere-ability-notes}" name="attr_sop-sphere-ability-notes" data-i18n-placeholder="sphere-ability-notes"  data-i18n-aria-label="sphere-ability"></textarea>
+							</div>
+							<div class="sheet-table-cell sheet-notes-cell">
+								<textarea class="sheet-half" title="@{sop-magic-skill-note}" name="attr_sop-magic-skill-note"  data-i18n-placeholder="magic-skill-check-notes"  data-i18n-aria-label="magic-skill-check-notes"></textarea>
+							</div>
+							<div class="sheet-table-cell sheet-notes-cell">
+								<textarea class="sheet-half" title="@{sop-concentration-miscnote}" name="attr_sop-concentration-miscnote" data-i18n-placeholder="concentration-check-notes"  data-i18n-aria-label="concentration-check-notes"></textarea>
+							</div>
+						</div>
+					</div>
+					<!-- Spell Roll Options -->
+					<div class="sheet-cheat"></div>
+					<!-- Sphere Ability List -->
+					
+				</div>
 			</div>
 			<div class="sheet-section6 sheet-section sheet-section-equipment" role="region" aria-label="Euipment" data-i18n-aria-label="equipment">
 				<div class="sheet-cheat sheet-show-readonly sheet-inverse-readonly"></div>
